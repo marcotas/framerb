@@ -3,7 +3,7 @@
 class Application
   def call(_env)
     res = Rack::Response.new
-    res.write('Hello World 23')
+    res.write(::DBI.to_s)
     res.finish
   end
 end
